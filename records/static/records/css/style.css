@@ -1,8 +1,30 @@
-body {
-    height: 100vh;
+.jumbotron {
     background-color: #FFFFE5;
 }
 
 .block {
     display: block;
+}
+
+.header {
+    color: #8E989E;
+}
+
+.submit-button {
+    background-color: #B2A1A1;
+    border-color: #8C7E7E;
+}
+
+.submit-button:hover, .submit-button:focus, .submit-button:active, .submit-button.active, .open>.dropdown-toggle.submit-button {
+    color: #FFFFFF;
+    background-color: #B8C4CC;
+    border-color: #97A2A8;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    align-items: center;
 }
