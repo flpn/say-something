@@ -5,19 +5,32 @@
         <div class="container text-center">
             <div class="row block">
                 <h3 class="header">Say something</h3>
-                <small id="subtitle" class="form-text text-muted">To someone...</small>
+                <small id="subtitle" class="form-text text-muted subtitle">...to someone.</small>
             </div>
+            
             <div class="row justify-content-md-center">
-                <form action="{% url 'records:submit' %}" method="post">
-                    
+                <form class="form-inline" action="{% url 'records:submit' %}" method="post">
                     {% csrf_token %}
-    
                     <div class="form-group">
                         <input type="text" class="form-control" name="record" id="record" placeholder="Type here...">
                     </div>
     
                     <button type="submit" class="btn btn-primary submit-button">Submit</button>
                 </form>
+            </div>
+
+            <div class="row">
+                <div class="col"></div>
+                <div class="list-group justify-content-md-center col-6 record-list">
+                    {% if record_list %}
+                        {% for record in record_list %}
+                            <a href="#" class="list-group-item list-group-item-action">{{ record.text }}</a>                
+                        {% endfor %}
+                    {% else %}
+                         <small id="subtitle" class="form-text text-muted subtitle">Nothing was said.</small>
+                    {% endif %}
+                </div>
+                <div class="col"></div>                
             </div>
         </div>
     </div>

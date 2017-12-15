@@ -8,11 +8,18 @@
 
 .header {
     color: #8E989E;
+    font-family: 'Lobster';
+    font-size: 50px;
+}
+
+.subtitle {
+    padding-bottom: 20px;
 }
 
 .submit-button {
     background-color: #B2A1A1;
     border-color: #8C7E7E;
+    margin-left: 5px;
 }
 
 .submit-button:hover, .submit-button:focus, .submit-button:active, .submit-button.active, .open>.dropdown-toggle.submit-button {
@@ -27,4 +34,8 @@
   
     display: flex;
     align-items: center;
+}
+
+.record-list {
+    margin-top: 20px;
 }
