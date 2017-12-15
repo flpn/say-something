@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views import generic 
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 
 from .models import Record
 
@@ -9,3 +11,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Record.objects.all()
+
+
+def submit(request):
+    return HttpResponseRedirect(reverse('records:index'))

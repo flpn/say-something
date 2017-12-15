@@ -2,6 +2,21 @@
 
 {% block content %}
     <div class="container">
-        <p>Block extends test.</p>
+        <div class="row block">
+            <h3>Say something</h3>
+            <small id="subtitle" class="form-text text-muted">To someone...</small>
+        </div>
+        <div class="row">
+            <form action="{% url 'records:submit' %}" method="post">
+                
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="record" id="record" placeholder="Type here...">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
 {% endblock  %}
