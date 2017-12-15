@@ -5,5 +5,5 @@ app_name = 'records'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('/submit', views.submit, name='submit'),
+    path('submit', views.submit, name='submit'),
 ]
