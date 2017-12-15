@@ -22,6 +22,8 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="list-group justify-content-md-center col-6 record-list">
+                    {% if error_message %} <p class="red">{{ error_message }}</p> {% endif %}
+                    
                     {% if record_list %}
                         {% for record in record_list %}
                             <a href="#" class="list-group-item list-group-item-action">{{ record.text }}</a>                
@@ -29,6 +31,7 @@
                     {% else %}
                          <small id="subtitle" class="form-text text-muted subtitle">Nothing was said.</small>
                     {% endif %}
+
                 </div>
                 <div class="col"></div>                
             </div>

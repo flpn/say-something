@@ -39,3 +39,7 @@
 .record-list {
     margin-top: 20px;
 }
+
+.red {
+    color: rgb(124, 0, 0);
+}
