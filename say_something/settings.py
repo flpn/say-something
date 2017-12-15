@@ -25,7 +25,7 @@ SECRET_KEY = '6213cghwn8$+rct#xd&umjm%pogjg_^07t1mkvc7cb_%af036o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['flpncc.pythonanywhere.com']
 
 
 # Application definition
